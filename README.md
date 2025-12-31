@@ -40,18 +40,22 @@ The system is designed to be lightweight, modular, and easy to extend for experi
 Before running the server run (in an empty terminal):
 ```bash
 xhost +
+```
 
 Start the server:
 ```bash
 make
+```
 
 Run as many clients and a single server using:
 ```bash
 xterm <hostname1> <hostname2> <hostname3> ...
+```
 
 In each host type:
 ```bash
-python3 net-tester.py 
+python3 net-tester.py
+```
 
 Then continue with either -s for server or -c <server_ip> for client.
 
