@@ -59,9 +59,9 @@ python3 net-tester.py
 
 Then continue with either -s for server or -c <server_ip> for client.
 
-For client:
-Add -p <port>
-Add -t <time_in_seconds> for time of test
-Add -i <time_in_seconds> for time of each interval (logs)
+For client: <br>
+Add -p <port> <br>
+Add -t <time_in_seconds> for time of test <br>
+Add -i <time_in_seconds> for time of each interval (logs) <br>
 
 Add -u for UDP for both server and client
