@@ -30,12 +30,16 @@ The system is designed to be lightweight, modular, and easy to extend for experi
 
 ## How It Works
 
-1. The server listens for incoming TCP or UDP connections.
-2. The client sends data packets continuously for a specified duration.
-3. The server records received data and timestamps.
-4. Bandwidth and other metrics are calculated and logged during and after the test.
+The tool measures network bandwidth using both TCP and UDP protocols:
 
-## Usage (Example)
+- **TCP**: The client connects to the server, sends data, and calculates real-time bandwidth, packet loss, and jitter. All TCP metrics are **logged and saved on the client side**.  
+- **UDP**: The client sends packets to the server without acknowledgments. Metrics such as packet loss and bandwidth are **calculated and logged on the server side**.  
+
+Multi-threading is used to handle multiple clients concurrently:  
+- For TCP, one thread per client on the server manages the connection.  
+- For UDP, the server processes incoming packets from multiple clients simultaneously.
+
+## Usage
 
 Before running the server run (in an empty terminal):
 ```bash
@@ -65,3 +69,5 @@ Add -t <time_in_seconds> for time of test <br>
 Add -i <time_in_seconds> for time of each interval (logs) <br>
 
 Add -u for UDP for both server and client
+
+Make sure to run the server before running the client/s.
