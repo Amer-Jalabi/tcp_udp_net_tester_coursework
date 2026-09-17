@@ -2,6 +2,8 @@
 
 A Python-based client–server application developed as part of university coursework to measure network bandwidth and related performance metrics using both **TCP** and **UDP**.
 
+**Coursework note:** This project was developed as part of university coursework using a university-provided starter codebase. The repository contains both provided framework code and my own implementation.
+
 ## Overview
 
 This project implements configurable TCP and UDP bandwidth tests between a client and a server.  
